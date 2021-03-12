@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "applicationCertificate",
+      "type": "java.lang.String",
+      "description": "Description for applicationCertificate."
+    },
+    {
+      "name": "applicationId",
+      "type": "java.lang.String",
+      "description": "Description for applicationId."
+    }
+  ]
+}
