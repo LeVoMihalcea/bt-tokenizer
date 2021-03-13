@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AgoraTokenServerApplication {
 
-	// testing jenkins builds
+	// testing jenkins builds 2
 	public static void main(String[] args) {
 		SpringApplication.run(AgoraTokenServerApplication.class, args);
 	}
