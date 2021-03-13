@@ -14,7 +14,7 @@ pipeline{
             steps{
                 sh '''
                         docker build -t bt-tokenizer .
-                        docker run bt-tokenizer
+                        docker run -d bt-tokenizer
                 '''
             }
         }
