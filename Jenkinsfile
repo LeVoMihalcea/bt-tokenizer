@@ -20,9 +20,10 @@ pipeline{
 
         stage('Deployment'){
             steps{
-                withMaven{
-                    sh 'mvn spring-boot:run'
-                }
+                sh '''
+                        docker build -t bt-tokenizer .
+                        docker run bt-tokenizer
+                '''
             }
         }
     }
