@@ -13,8 +13,8 @@ pipeline{
         stage('Deployment'){
             steps{
                 sh '''
-                        docker build -t bt-tokenizer . --platform linux/arm/v7
-                        docker run bt-tokenizer --platform linux/arm/v7
+                        docker build -t bt-tokenizer .
+                        docker run bt-tokenizer
                 '''
             }
         }
