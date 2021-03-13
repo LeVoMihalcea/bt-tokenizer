@@ -1,10 +1,6 @@
 pipeline{
     agent any
 
-    triggers {
-        pollSCM '* * * * *'
-    }
-
     stages {
         stage('Compile Stage'){
             steps{
@@ -18,6 +14,14 @@ pipeline{
             steps{
                 withMaven(maven: 'maven_3_6_3') {
                     sh 'mvn test'
+                }
+            }
+        }
+
+        stage('Deployment'){
+            steps{
+                withMaven(maven: 'maven_3_6_3') {
+                    sh 'mvn spring-boot:run'
                 }
             }
         }
