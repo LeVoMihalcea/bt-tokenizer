@@ -14,7 +14,7 @@ pipeline{
             steps{
                 sh '''
                         docker build -t bt-tokenizer .
-                        docker run -d --restart unless-stopped bt-tokenizer
+                        docker run -d --restart unless-stopped --name bt-tokenizer bt-tokenizer
                 '''
             }
         }
