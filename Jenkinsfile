@@ -14,7 +14,7 @@ pipeline{
             steps{
                 sh '''
                         docker-compose -f /opt/bt-tokenizer/docker-compose.yml down || true
-                        docker image rm bt-tokenizer
+                        docker image rm bt-tokenizer || true
                         docker build -t bt-tokenizer .
                         docker-compose -f /opt/bt-tokenizer/docker-compose.yml up -d
                 '''
