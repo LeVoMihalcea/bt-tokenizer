@@ -13,8 +13,7 @@ pipeline{
         stage('Deployment'){
             steps{
                 sh '''
-                        docker stop bt-tokenizer
-                        docker rm bt-tokenizer
+                        docker stop bt-tokenizer || true && docker rm bt-tokenizer || true
                         docker image rm bt-tokenizer
                         docker build -t bt-tokenizer .
                         docker run -d --restart unless-stopped --name bt-tokenizer bt-tokenizer
