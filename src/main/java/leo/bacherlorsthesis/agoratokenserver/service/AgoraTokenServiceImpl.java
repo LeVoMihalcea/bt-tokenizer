@@ -3,6 +3,7 @@ package leo.bacherlorsthesis.agoratokenserver.service;
 import leo.bacherlorsthesis.agoratokenserver.builders.RtcTokenBuilder;
 import leo.bacherlorsthesis.agoratokenserver.domain.responses.TokenResponse;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 public class AgoraTokenServiceImpl implements AgoraTokenService {
     static int expirationTimeInSeconds = 3600;
